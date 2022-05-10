@@ -11,10 +11,23 @@ main {
 }
 
 /* ========================================================================= */
+.addscore-wrapper {
+  float: right;
+  width: 45%;
+}
+
+.addscore-list {
+  list-style: none;
+}
+
+.addscore-list li {
+  margin: 10px 0;
+}
+
+/* ========================================================================= */
 .scoreboard-wrapper {
   float: left;
   width: 45%;
-
 }
 
 .scoreboard {
@@ -24,11 +37,11 @@ main {
 }
 
 .scoreboard li {
-    padding: 5px;
+  padding: 5px;
 }
 
 .scoreboard li:nth-child(odd) {
-    background-color: bisque;
+  background-color: bisque;
 }
 
 .scoreboard-title {
@@ -43,18 +56,4 @@ main {
 .name {
   margin-right: 5px;
   float: left;
-}
-
-/* ========================================================================= */
-.addscore-wrapper {
-   float: right;
-   width: 45%;
-}
-
-.addscore-list {
-  list-style: none;
-}
-
-.addscore-list li {
-  margin: 10px 0;
 }
