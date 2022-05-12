@@ -1,4 +1,4 @@
-async function createGame() {
+const createGame = () => {
   const game = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
     method: 'POST',
     headers: {
@@ -9,7 +9,7 @@ async function createGame() {
   return game.json().then((data) => localStorage.setItem('Data', /\w{20}/.exec(data.result)[0]));
 }
 
-async function post(gameId, data) {
+const post = async (gameId, data) => {
   await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`, {
     method: 'POST',
     headers: {
@@ -19,7 +19,7 @@ async function post(gameId, data) {
   });
 }
 
-async function get(gameId) {
+const get = async (gameId) => {
   const score = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`);
   return score.json().then((data) => data.result);
 }

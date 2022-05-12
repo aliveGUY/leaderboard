@@ -5,7 +5,7 @@ const form = document.forms[0];
 const leaderboard = document.querySelector('.scoreboard');
 
 // Save game id in local storage
-async function createId() {
+const createId = async () => {
   await createGame();
   const ID = localStorage.getItem('Data');
   return ID;
@@ -13,7 +13,7 @@ async function createId() {
 const id = localStorage.getItem('Data') || createId();
 
 // post new player
-async function send() {
+const send = async () => {
   const data = {
     user: form[0].value,
     score: form[1].value,
@@ -34,7 +34,7 @@ form[2].onclick = (e) => {
 };
 
 // refresh
-async function refresh() {
+const refresh = async () => {
   const data = await get(id);
   if (data.length > 0) {
     data.forEach((item) => {
