@@ -9,7 +9,7 @@ const createId = async () => {
   await createGame();
   const ID = localStorage.getItem('Data');
   return ID;
-}
+};
 const id = localStorage.getItem('Data') || createId();
 
 // post new player
@@ -19,7 +19,7 @@ const send = async () => {
     score: form[1].value,
   };
   await post(id, data);
-}
+};
 
 form[2].onclick = (e) => {
   e.preventDefault();
@@ -47,7 +47,7 @@ const refresh = async () => {
       leaderboard.appendChild(child);
     });
   }
-}
+};
 refresh();
 
 document.getElementById('refresh').onclick = () => {
