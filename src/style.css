@@ -1,17 +1,25 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main {
-  width: 100vw;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px;
+  height: 100vh;
+  padding: 0 10vw;
+  background-color: #F4EBD0;
+}
+
+.logo-wrapper {
+  text-align: center;
+  padding: 20px 0;
 }
 
 /* ========================================================================= */
 .addscore-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   float: right;
   width: 45%;
 }
@@ -24,6 +32,25 @@ main {
   margin: 10px 0;
 }
 
+.addscore-list li input {
+  border: none;
+  padding: 5px;
+  box-shadow: inset 0 0 7px 0 #000;
+  background-color: #D6AD60;
+}
+
+.addscore-list li input::placeholder {
+  color: #000;
+}
+
+.addscore-list li button {
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  background-color: #122620;
+}
+
 /* ========================================================================= */
 .scoreboard-wrapper {
   float: left;
@@ -31,9 +58,10 @@ main {
 }
 
 .scoreboard {
-  border: 2px solid #000;
+  box-shadow: 0 0 10px 0 #000;
   list-style: none;
   min-height: 200px;
+  background-color: #D6AD60;
 }
 
 .scoreboard li {
@@ -41,11 +69,23 @@ main {
 }
 
 .scoreboard li:nth-child(odd) {
-  background-color: bisque;
+  background-color: #B68D40;
+}
+
+.scoreboard li:nth-child(even) {
+  background-color: #D6AD60;
 }
 
 .scoreboard-title {
   margin-bottom: 10px;
+}
+
+.scoreboard-title button {
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  background-color: #122620;
 }
 
 .scoreboard-title h2 {
